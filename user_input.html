@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Run Algorithm</title>
+  </head>
+  <body>
+    <h1>Run Algorithm</h1>
+    <form id="algorithmForm">
+      <label for="inputData">Enter input data (comma-separated):</label>
+      <input type="text" id="inputData" name="inputData" required />
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+      document
+        .getElementById("algorithmForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          console.log(127818971298);
+
+          // Get the input data from the form
+          const inputData = document
+            .getElementById("inputData")
+            .value.split(",")
+            .map(Number);
+
+          console.log("here");
+
+          // Send the input data to the server using Fetch
+          fetch("http://localhost:8080/run-algorithm", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(inputData),
+          })
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error(HTTP error! status: ${response.status});
+              }
+              return response.json();
+            })
+            .then((data) => {
+              // Display the result
+              document.getElementById(
+                "result"
+              ).innerText = Probability of PCOS: ${
+                data.probability_pcos * 100
+              }%;
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              document.getElementById(
+                "result"
+              ).innerText = An error occurred: ${error.message};
+            });
+        });
+    </script>
+  </body>
+</html>
