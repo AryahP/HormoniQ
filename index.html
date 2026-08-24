@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#171015" />
+  <title>HormoniQ — PCOS screening support</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav"><a class="brand" href="#top"><span>✦</span> HormoniQ</a><nav><a href="#screen">Screening</a><a href="#learn">Learn</a><a href="#care">Next steps</a></nav></header>
+  <main id="top">
+    <section class="hero"><div><p class="eyebrow">PCOS screening support</p><h1>Understand your <em>hormonal health</em>, one step at a time.</h1><p class="lede">A private, educational tool that turns health signals into a conversation starter for your clinician.</p><a class="button" href="#screen">Start a check-in <span>→</span></a><p class="micro">For adults. Not a diagnosis or a substitute for medical care.</p></div></section>
+    <section class="notice"><span>♡</span><p><strong>First, a note on safety.</strong> This screen estimates a pattern from a research dataset. Only a qualified clinician can diagnose PCOS, usually after a history, exam, and appropriate testing.</p></section>
+    <section id="screen" class="screening"><div class="section-title"><p class="eyebrow">A gentle check-in</p><h2>Your screening snapshot</h2><p>Share what you know. Optional lab fields are left at typical dataset values if omitted.</p></div>
+      <form id="screeningForm"><div class="form-grid">
+        <label>Age <span>years</span><input required min="13" max="70" type="number" name="Age (yrs)" placeholder="e.g. 28" /></label>
+        <label>Weight <span>kg</span><input required min="25" max="250" step="0.1" type="number" name="Weight (Kg)" placeholder="e.g. 62" /></label>
+        <label>Height <span>cm</span><input required min="120" max="220" type="number" name="Height(Cm)" placeholder="e.g. 165" /></label>
+        <label>Cycle length <span>days</span><input required min="10" max="100" type="number" name="Cycle length(days)" placeholder="e.g. 32" /></label>
+        <label>Cycle pattern <span>regular / irregular</span><select required name="Cycle(R/I)"><option value="">Select one</option><option value="2">Irregular</option><option value="1">Regular</option></select></label>
+        <label>Hair growth <span>new/coarse growth</span><select required name="hair growth(Y/N)"><option value="">Select one</option><option value="1">Yes</option><option value="0">No</option></select></label>
+        <label>Acne / pimples <span>persistent</span><select required name="Pimples(Y/N)"><option value="">Select one</option><option value="1">Yes</option><option value="0">No</option></select></label>
+        <label>Recent weight gain <span>noticeable</span><select required name="Weight gain(Y/N)"><option value="">Select one</option><option value="1">Yes</option><option value="0">No</option></select></label>
+        <label>AMH <span>ng/mL · optional</span><input min="0" step="0.01" type="number" name="AMH(ng/mL)" placeholder="From lab results" /></label>
+        <label>LH <span>mIU/mL · optional</span><input min="0" step="0.01" type="number" name="LH(mIU/mL)" placeholder="From lab results" /></label>
+      </div><button class="button submit" type="submit">View screening snapshot <span>→</span></button></form>
+      <div id="result" class="result" hidden aria-live="polite"></div>
+    </section>
+    <section id="learn" class="learn"><div class="section-title"><p class="eyebrow">The basics</p><h2>What is PCOS?</h2><p>Polycystic ovary syndrome is a common hormonal condition. Its presentation can look different from person to person.</p></div><div class="cards"><article><span>01</span><h3>Common signs</h3><p>Irregular or absent periods, acne, excess facial or body hair, scalp hair thinning, weight changes, and difficulty becoming pregnant can be signs to discuss.</p></article><article><span>02</span><h3>How it’s assessed</h3><p>Clinicians look at your menstrual history, symptoms, blood work and sometimes an ultrasound, while ruling out other possible causes.</p></article><article><span>03</span><h3>Care can help</h3><p>Support may include lifestyle care, medication, and treatment tailored to your goals—whether that is cycle management, skin concerns, or fertility.</p></article></div></section>
+    <section id="care" class="care"><div><p class="eyebrow">Make your next visit count</p><h2>Bring the whole picture.</h2><p>Track period dates, symptoms, medications, family history, and questions. You deserve to be heard.</p></div><ul><li><span>01</span> Save a cycle and symptom timeline.</li><li><span>02</span> Ask whether labs or an ultrasound are appropriate.</li><li><span>03</span> Seek urgent care for severe pelvic pain, very heavy bleeding, fainting, or a possible pregnancy concern.</li></ul></section>
+  </main><footer><span>✦ HormoniQ</span><p>Made for informed conversations, not self-diagnosis.</p></footer><script src="app.js"></script>
+</body></html>
